@@ -42,7 +42,7 @@ function App() {
       <Router>
         <Navbar
           title="TextUtils"
-          about="About Us"
+          about="About"
           mode={mode}
           onToggle={onToggleMode}
         />

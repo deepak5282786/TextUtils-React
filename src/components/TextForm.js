@@ -13,8 +13,7 @@ export default function TextForm(props) {
     props.showAlert("Handled Extra Spaces", "success");
   };
   const copyText = () => {
-    let text = document.getElementById("myBox");
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
     props.showAlert("Copied to ClipBoard", "success");
   };
   const clearText = () => {
@@ -114,7 +113,7 @@ export default function TextForm(props) {
         </p>
         <p>
           {
-            text.split(" ").filter((element) => {
+            text.split(/\s+/).filter((element) => {
               return element.length !== 0;
             }).length
           }
