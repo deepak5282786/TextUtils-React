@@ -1,26 +1,4 @@
-import React, { useState } from "react";
-
 export default function About(props) {
-  // const [myStyle, SetmyStyle] = useState({
-  //   color: "black",
-  //   backgroundColor: "white",
-  // });
-  // const [btnText, setbtnText] = useState(" Enable Dark Mode");
-  // const darkmodeFeatures = () => {
-  //   if (myStyle.color === "black") {
-  //     SetmyStyle({
-  //       color: "white",
-  //       backgroundColor: "#071330",
-  //     });
-  //     setbtnText("Disable Dark Mode");
-  //   } else {
-  //     SetmyStyle({
-  //       color: "black",
-  //       backgroundColor: "white",
-  //     });
-  //     setbtnText("Enable Dark Mode");
-  //   }
-  // };
   let myStyle = {
     color: props.mode === "dark" ? "white" : "#042743",
     backgroundColor: props.mode === "dark" ? "rgb(36 74 104)" : "white",
@@ -120,13 +98,6 @@ export default function About(props) {
           </div>
         </div>
       </div>
-      {/* <button
-        type="button"
-        className="btn btn-primary my-3"
-        onClick={darkmodeFeatures}
-      >
-        {btnText}
-      </button> */}
     </div>
   );
 }
