@@ -57,22 +57,28 @@ export default function TextForm(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={toUpperCase}>
+        <button className="btn btn-primary mx-2 my-1" onClick={toUpperCase}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={toLowerCase}>
+        <button className="btn btn-primary mx-2 my-1" onClick={toLowerCase}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={clearText}>
+        <button className="btn btn-primary mx-2 my-1" onClick={clearText}>
           Clear Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={copyText}>
+        <button className="btn btn-primary mx-2 my-1" onClick={copyText}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>
+        <button
+          className="btn btn-primary mx-2 my-1"
+          onClick={handleExtraSpaces}
+        >
           Remove Extra Spaces
         </button>
-        <button className="btn btn-primary mx-2" onClick={letterCapitalize}>
+        <button
+          className="btn btn-primary mx-2 my-1"
+          onClick={letterCapitalize}
+        >
           Capital First Letter
         </button>
       </div>
@@ -86,7 +92,12 @@ export default function TextForm(props) {
           <b>Count entered Word And Character</b>
         </p>
         <p>
-          {text.split(" ").length}-Words and {text.length}-Character
+          {
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length
+          }
+          -Words and {text.length}-Character
         </p>
         <p>{0.008 * text.split(" ").length} Minutes Takes to Read </p>
         <h4>Preview</h4>
